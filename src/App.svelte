@@ -1,30 +1,48 @@
 <script>
-	export let name;
+  import ControlBar from './components/ControlBar.svelte';
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  .container {
+    display: flex;
+    height: 100vh;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  .sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  .main-content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between placeholder boxes */
+  }
+
+  .placeholder-box {
+    width: 100px;
+    height: 100px;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
 </style>
+
+<div class="container">
+  <div class="sidebar">
+    <ControlBar />
+  </div>
+  <div class="main-content">
+    <!-- Placeholder boxes in the main content area -->
+    <div class="placeholder-box">Content 1</div>
+    <div class="placeholder-box">Content 2</div>
+    <div class="placeholder-box">Content 3</div>
+    <!-- Add more placeholders as needed -->
+  </div>
+</div>
