@@ -1,5 +1,5 @@
 <script>
-  import ControlBar from './components/ControlBar.svelte';
+  import ControlBar from './ControlBar.svelte';
 </script>
 
 <style>
