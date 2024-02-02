@@ -1,48 +1,23 @@
 <script>
   import ControlBar from './ControlBar.svelte';
+  import LyricsInput from './LyricsInput.svelte';
 </script>
 
 <style>
-  .container {
-    display: flex;
-    height: 100vh;
-  }
-
-  .sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
-  }
-
-  .main-content {
-    flex-grow: 1;
-    background-color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between placeholder boxes */
-  }
-
-  .placeholder-box {
-    width: 100px;
-    height: 100px;
-    background-color: #d3d3d3;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
+  .lyrics-input-container {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    right: 0; /* Align to the right edge */
+    bottom: 0; /* Align to the bottom edge */
+    margin: 20px; /* Add some margin for spacing from the edges */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add a background color with some transparency */
+    padding: 10px; /* Add some padding around the content */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
   }
 </style>
 
-<div class="container">
-  <div class="sidebar">
-    <ControlBar />
+<main>
+  <div class="lyrics-input-container">
+    <LyricsInput />
   </div>
-  <div class="main-content">
-    <!-- Placeholder boxes in the main content area -->
-    <div class="placeholder-box">Content 1</div>
-    <div class="placeholder-box">Content 2</div>
-    <div class="placeholder-box">Content 3</div>
-    <!-- Add more placeholders as needed -->
-  </div>
-</div>
+</main>
