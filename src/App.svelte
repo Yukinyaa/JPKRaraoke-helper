@@ -11,7 +11,6 @@
   let savedDataTitles = [];
 
   onMount(() => {
-    // Load the saved data titles when the app starts
     loadSavedDataTitles();
   });
 
@@ -57,10 +56,8 @@
   <Sidebar savedDataList={savedDataTitles} selectedData={$selectedData} />
   <div class="content">
     {#if loadedData !== null}
-      <!-- Display loaded data here -->
-      <h2>{loadedData.title}</h2>
-      <p>{loadedData.lyrics}</p>
-      <!-- Add more elements as needed to display other data properties -->
+      <!-- Pass loaded data to ParentContainer -->
+      <ParentContainer loadedData={loadedData} />
     {:else}
       <p>No data loaded.</p>
     {/if}

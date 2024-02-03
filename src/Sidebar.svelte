@@ -8,6 +8,28 @@
   function selectData(title) {
     $selectedData = title; // Update the selectedData store
   }
+  let isModalOpen = false; // Whether the modal is open
+
+
+  function deleteData() {
+  if (selectedData !== null) {
+    const key = selectedData; // Assuming selectedData is the title of the data
+
+    // Display a confirmation prompt
+    const confirmDelete = confirm('Are you sure you want to delete this data?');
+
+    if (confirmDelete) {
+      // User confirmed, delete the data
+      localStorage.removeItem(key);
+
+      // Clear the selectedData store
+      $selectedData = null;
+
+      // Update the list of saved data titles
+      loadSavedDataTitles();
+    }
+  }
+}
 </script>
 
 <div class="sidebar">
@@ -23,6 +45,7 @@
     {/each}
   </ul>
 </div>
+
 
 <style>
   .sidebar {

@@ -10,10 +10,14 @@
     "svelte-loader": "^3.1.9",
     "webpack": "^5.70.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "pako": "^2.1.0"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "webpack serve"
+  },
+  "dependencies": {
+    "pako": "^2.1.0"
   }
 }
