@@ -74,6 +74,7 @@
 
   // Call a function to clear the form
   clearForm();
+  window.location.reload();
 }
 
   function clearForm() {
