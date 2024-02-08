@@ -59,6 +59,16 @@
     }
   }
 
+  function getLine(typeNo, currentLine, index) {
+    var line = splitLyrics[(currentLine + index) * 3 + typeNo]
+
+    if (line === undefined || line === '') {
+      return '-'
+    }
+
+     return line
+  }
+
   // Listen for keydown events to handle key presses
   window.addEventListener('keydown', handleKeyPress);
 
@@ -83,9 +93,9 @@
       <!-- Pass the currentLine to LyricsDisplay to display the corresponding lyrics -->
       <LyricsDisplay
         lyricsSet = {{
-          jp: jpNo >= 0 ? splitLyrics[(currentLine + index) * 3 + jpNo] : '', // Check if jpNo is valid
-          krPhonics: phNo >= 0 ? splitLyrics[(currentLine + index) * 3 + phNo] : '', // Check if phNo is valid
-          krTranslation: krNo >= 0 ? splitLyrics[(currentLine + index) * 3 + krNo] : '', // Check if krNo is valid
+          jp: getLine(jpNo, currentLine, index), // Check if jpNo is valid
+          krPhonics: getLine(phNo, currentLine, index), // Check if phNo is valid
+          krTranslation: getLine(krNo, currentLine, index), // Check if krNo is valid
         }}
         opacity = {1 - Math.abs(index) * 0.2}
         fontSizePx =  {24 * (1 - Math.abs(index) * 0.2)}
