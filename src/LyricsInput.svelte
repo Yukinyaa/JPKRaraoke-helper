@@ -1,6 +1,8 @@
 <!-- LyricsInput.svelte -->
 <script>
   import { slide } from 'svelte/transition';
+  import { JSZip } from 'jszip';
+
   let title = '';
   let lyrics = '';
   let isVisible = true;
