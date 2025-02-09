@@ -1,0 +1,69 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+.lyrics-container.svelte-ln95kj{background-color:#f0f0f0;border:2px solid #333;border-radius:10px;max-width:80%;padding:10px;text-align:center}
+.sidebar.svelte-17uuo7r{width:250px;background-color:#f0f0f0;padding:10px}ul.svelte-17uuo7r{list-style:none;padding:0}li.svelte-17uuo7r{cursor:pointer;padding:5px}li.active.svelte-17uuo7r{background-color:#ccc}.button-container.svelte-17uuo7r{margin-top:10px;display:flex;gap:10px;justify-content:space-between}.action-button.svelte-17uuo7r{flex:1;padding:10px;cursor:pointer;background-color:#ffffff;color:#333333;border:black;border-radius:5px;text-align:center;width:120px;font-size:14px;font-weight:bold;user-select:none}.action-button.svelte-17uuo7r:hover{background-color:#bbbbbb}
+.lyrics-display-container.svelte-rgm2pq{transition:transform 0.5s}
+.container.svelte-1wip298{position:relative;padding:10px;box-sizing:border-box}input[type="text"].svelte-1wip298,textarea.svelte-1wip298{width:100%;margin-bottom:10px;box-sizing:border-box}textarea.svelte-1wip298{height:150px;resize:none}.buttons.svelte-1wip298{display:flex;justify-content:space-between}.hide-button.svelte-1wip298{position:absolute;right:10px;bottom:10px;cursor:pointer}
+.lyrics-input-container.svelte-fljnjf{position:fixed;right:0;bottom:0;margin:20px;background-color:rgba(255, 255, 255, 0.9);padding:10px;border-radius:8px;box-shadow:0 2px 4px rgba(0, 0, 0, 0.1)}
